@@ -9,4 +9,8 @@
       yum:
         name: nginx
         state: present 
-  
+
+    - name: Ensure Nginx is running
+      service:
+        name: nginx
+        state: started 
