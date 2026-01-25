@@ -1,0 +1,19 @@
+name: Ansible Deploy
+
+on: 
+  workflow_dispatch: {}
+  push:
+   branches: ["main"]
+
+jobs:
+  run-ansible:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: listout
+        run: |
+          pwd
+          ls -ltr
