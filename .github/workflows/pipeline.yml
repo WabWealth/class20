@@ -18,6 +18,8 @@ jobs:
           pwd
           ls -ltr
           ansible --version
+          echo "${{ secret.EC2_SSH_PRIVATE_KEY }}" > /tmp/key.pem
+          chmod 400 /tmp/key.pem
 
       - name: Run Playbook
         run: |
