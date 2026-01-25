@@ -16,6 +16,7 @@ jobs:
       - name: listout
         run: |
           pwd
+          ls -ltr
           ansible --version
 
       - name: Run Playbook
