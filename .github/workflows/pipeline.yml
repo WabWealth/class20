@@ -21,4 +21,4 @@ jobs:
 
       - name: Run Playbook
         run: |
-          ansible-playbook -i inventories/dev.yml playbook.yml
+          ansible-playbook -i inventories/dev.ini playbook.yml
