@@ -1,4 +1,4 @@
-# --- Default VPC (simplest path for class; no custom VPC required) ---
+# --- Default VPC 
 data "aws_vpc" "default" {
   default = true
 }
