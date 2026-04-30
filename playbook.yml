@@ -14,3 +14,14 @@
       service:
         name: nginx
         state: started 
+
+- name: JDK Install
+  hosts: app
+  become: true
+  gather_facts: true
+
+  tasks:
+    - name: Install OpenJDK 17
+      yum:
+        name: java-17-amazon-corretto
+        state: present
