@@ -21,7 +21,16 @@
   gather_facts: true
 
   tasks:
+    - name: Clean dnf metadata/cache
+      command: dnf clean all
+      changed_when: false
+
+    - name: Rebuild dnf cache
+      command: dnf makecache
+      changed_when: false
+
     - name: Install OpenJDK 17
-      yum:
+      dnf:
         name: java-17-amazon-corretto
         state: present
+        update_cache: true
